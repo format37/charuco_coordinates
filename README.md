@@ -99,3 +99,14 @@ To check that vectors were restored correctly, we can compare vectors with datas
 </table>
 </div>
 <br>
+
+## Installation
+```
+git clone https://github.com/format37/charuco_coordinates.git
+cd charuco_coordinates
+pip install -r requirements.txt
+```
+## Usage
+```
+python charuco.py
+```
