@@ -60,7 +60,7 @@ Diagnostic image for each detected target are saved to the diagnostics folder:
 <br>
 Finally, the 3d representation of camera vectors are plotted by matplotlib:  
 <br>
-<img src="./assets/3dscene_plotting.png">
+<img src="./assets/3dscene_plotting.png" width="900">
 <br>
 
 ## What we need
