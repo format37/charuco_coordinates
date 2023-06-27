@@ -5,7 +5,7 @@ Charuco coordinates transformation
 First of all, we have a calibration stage, when all cameras can see the Floor charuco board.
 There we need to calculate the Film vectors, which is translation and rotation vectors ftom Film camera to Film target.<br>
 <div align="center">
-<img src="./assets/scheme_no_obstacle.png" width="300"><br>
+<img src="./assets/scheme_no_obstacle.png"><br>
 <table style="border: none;">
     <tr>
         <th style="border: none;">Tracking camera</th>
