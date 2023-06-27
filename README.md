@@ -14,8 +14,8 @@ We need to calculate the FILM_VECTORS, which are translation and rotation vector
         <th style="border: none;">Film camera</th>
     </tr>
     <tr>
-        <td style="border: none;"><img src="./renders/0/TrackingCameraView.png" width="300"></td>
-        <td style="border: none;"><img src="./renders/0/FilmCameraView.png" width="300"></td>
+        <td style="border: none;"><img src="./renders/0/a_TrackingCameraView.png" width="300"></td>
+        <td style="border: none;"><img src="./renders/0/b_FilmCameraView.png" width="300"></td>
     </tr>
 </table>
 </div>
@@ -32,8 +32,8 @@ Consequently, we need a method that allows us to compute the FILM_CAMERA's posit
         <th style="border: none;">Film camera</th>
     </tr>
     <tr>
-        <td style="border: none;"><img src="./renders/2/TrackingCameraView.png" width="300"></td>
-        <td style="border: none;"><img src="./renders/2/FilmCameraView.png" width="300"></td>
+        <td style="border: none;"><img src="./renders/2/a_TrackingCameraView.png" width="300"></td>
+        <td style="border: none;"><img src="./renders/2/b_FilmCameraView.png" width="300"></td>
     </tr>
 </table>
 </div>
