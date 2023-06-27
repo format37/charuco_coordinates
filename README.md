@@ -56,11 +56,15 @@ For example, out/0/b_FilmCameraView.png.txt:
 ```
 Diagnostic image for each detected target are saved to the diagnostics folder:  
 <br>
+<div align="center">
 <img src="./assets/0a_TrackingCameraView.png" width="300">
+</div>
 <br>
 Finally, the 3d representation of camera vectors are plotted by matplotlib:  
 <br>
+<div align="center">
 <img src="./assets/3dscene_plotting.png">
+</div>
 <br>
 
 ## What we need
