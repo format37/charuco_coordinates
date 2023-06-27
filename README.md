@@ -2,18 +2,9 @@
 Setup:  
 * FLOOR_TARGET is a charuco board, mounted on the floor.  
 * TRACKING_CAMERA have a wide-angle top-down view of the entire scene and is used to properly track the position of the FILM_TARGTET.  
-* FILM_CAMERA have a FILM_TARGTET charuco board, mounted on the top of camera.  
-  
-At the start, we know all cameras position in the FLOOR_TARGET coordinarte system.  
-  
-But then the film cameras starting to move and rotate.  
-FILM_CAMERA will not always will see tha FLOOR_TARGET, but we still need to know the FILM_CAMERA position and rotation in the FLOOR_TARGET coordinate system.  
-  
-We need to restore FILM_CAMERA position by the chain:  
-FLOOR_TARGET -> TRACKING_CAMERA -> FILM_TARGET -> FILM_VECTORS.
-
+* FILM_CAMERA have a FILM_TARGTET charuco board, mounted on the top of camera.
 ## Stage 1
-First, we have a calibration stage, when all cameras can see the FLOOR_TARGET which is defines the absolute 0,0,0 point of the scene.<br>
+At the start, we know all cameras position in the FLOOR_TARGET coordinarte system.  
 We need to calculate the FILM_VECTORS, which are translation and rotation vectors from FILM_CAMERA to FILM_TARGET that will be used further.<br>
 <div align="center">
 <img src="./assets/scheme_no_obstacle.png"><br>
@@ -30,9 +21,9 @@ We need to calculate the FILM_VECTORS, which are translation and rotation vector
 </div>
 
 ## Stage 2
-Next, even if the FLOOR_TARGET is not visible, we still need to be able to calculate the FILM_CAMERA position and rotation vectors in the FLOOR_TARGET coordinate system. In addition, we need to account that the FILM_CAMERA + FILM_TARGET has changed its position and rotation.  
+Even as the FILM_CAMERAs begin to move and rotate, our objective remains to accurately track the position and rotation of the FILM_CAMERA in the FLOOR_TARGET coordinate system, regardless of its visibility. To achieve this, we need to establish a chain of reference:  
+FLOOR_TARGET -> TRACKING_CAMERA -> FILM_TARGET -> FILM_VECTORS  
+Consequently, it is crucial to devise a method that allows us to compute the FILM_CAMERA's position and rotation vectors in the FLOOR_TARGET coordinate system, even when the FLOOR_TARGET is out of sight.  
 ![Production stage](./assets/scheme_obstackle.png)<br>
-According camera views is:<br>
-
 ## What we have
 ...
