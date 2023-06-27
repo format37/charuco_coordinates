@@ -1,9 +1,19 @@
-# charuco_coordinates
-Charuco coordinates transformation
+# Charuco coordinates transformation
+* TRACKING_CAMERA have a wide-angle top-down view of the entire scene and is used to properly track the positions of the other.
+* FILM_CAMERAs with their respective Charuco targets.
+* FILM_CAMERA have a charuco board, mountet on the top of FILM_CAMERA.
+  
+At the start, we know all cameras position in the FLOOR_TARGET coordinarte system.
+  
+But then the film cameras starting to move and rotate.
+FILM_CAMERA will not always will see tha FLOOR_TARGET, but we still need to know the FILM_CAMERA position and rotation in the FLOOR_TARGET coordinate system.
+  
+We need to restore FILM_CAMERA position by the chain:
+FLOOR_TARGET -> TRACKING_CAMERA -> FILM_TARGET -> FILM_VECTORS.
 
 ## Stage 1
-First of all, we have a calibration stage, when all cameras can see the Floor charuco board.
-There we need to calculate the Film vectors, which is translation and rotation vectors ftom Film camera to Film target.<br>
+First, we have a calibration stage, when all cameras can see the FLOOR_TARGET which is defines the absolute 0,0,0 point of the scene.<br>
+We need to calculate the FILM_VECTORS, which are translation and rotation vectors from FILM_CAMERA to FILM_TARGET that will be used further.<br>
 <div align="center">
 <img src="./assets/scheme_no_obstacle.png"><br>
 <table style="border: none;">
@@ -19,8 +29,9 @@ There we need to calculate the Film vectors, which is translation and rotation v
 </div>
 
 ## Stage 2
-Next, even if the floor charuco board is not visible, we still need to be able to calculate the Film camera position and rotation vectors in the floor charuco board coordinate system. In addition we need to account that the film camera had changed its position and rotation.  
+Next, even if the FLOOR_TARGET is not visible, we still need to be able to calculate the FILM_CAMERA position and rotation vectors in the FLOOR_TARGET coordinate system. In addition, we need to account that the FILM_CAMERA + FILM_TARGET has changed its position and rotation.  
 ![Production stage](./assets/scheme_obstackle.png)<br>
 According camera views is:<br>
 
-## Summary
+## What we have
+...
