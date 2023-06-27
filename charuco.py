@@ -226,7 +226,7 @@ def doAruco(directory, dataset, fn, K , distCoeff, squareLength, dict_id, camera
             cD_path = os.path.join(cD_path, dataset)
             if not os.path.exists(cD_path):
                 os.makedirs(cD_path)            
-            cv2.imwrite(os.path.join(cD_path, fn), im_with_charuco_board)
+            cv2.imwrite(os.path.join(cD_path, str(dict_id)+fn), im_with_charuco_board)
             
             # return rvecs_current, tvecs_current, charucoCorners, rvecs_current_board, tvecs_current_board
             colors = [
