@@ -1,8 +1,8 @@
 # Charuco coordinates transformation
 Setup:  
-* FLOOR_TARGET is a charuco board, mounted on the floor.  
-* TRACKING_CAMERA have a wide-angle top-down view of the entire scene and is used to properly track the position of the FILM_TARGTET.  
-* FILM_CAMERA have a FILM_TARGTET charuco board, mounted on the top of camera.
+* The FLOOR_TARGET is a static charuco board positioned on the floor.  
+* The TRACKING_CAMERA is securely mounted, offering a wide-angle, top-down view of the entire scene, and its primary role is to accurately track the position of the FILM_TARGET.  
+* The FILM_CAMERA, on the other hand, is mobile and features a FILM_TARGET, which is a charuco board affixed to its top.  
 ## Stage 1
 At the start, we know all cameras position in the FLOOR_TARGET coordinarte system.  
 We need to calculate the FILM_VECTORS, which are translation and rotation vectors from FILM_CAMERA to FILM_TARGET that will be used further.<br>
