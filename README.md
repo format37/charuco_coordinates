@@ -45,7 +45,7 @@ Consequently, we need a method that allows us to compute the FILM_CAMERA's posit
 3. Only TRACKING_CAMERA can see FLOOR_TARGET and FILM_CAMERA is moved  
 Each dataset have view of two cameras: TRACKING_CAMERA and FILM_CAMERA.  
   
-* Five charuco dictionaries  
+* Six charuco dictionaries, because we have two charuco boards, with 0th and 5th ids.  
   
 * [charuco.py](https://github.com/format37/charuco_coordinates/blob/main/charuco.py) iterating all datasets, all dictionaries, all cameras. Trying to detect board and estimate the camera pose if board detected.  
 Rotation and translation vectors are saved to the out folder in text format:  
@@ -60,8 +60,41 @@ Diagnostic image for each detected target are saved to the diagnostics folder:
 <br>
 Finally, the 3d representation of camera vectors are plotted by matplotlib:  
 <br>
-<img src="./assets/3dscene_plotting.png" width="900">
+<img src="./assets/3dscene_plotting.png">
 <br>
 
 ## What we need
-...
+Estimate the camera translation and rotation vectors in the FLOOR_TARGET coordinate system, even when the FLOOR_TARGET is out of sight of the FILM_CAMERA. This is dataset 2:
+<br>
+<div align="center">
+<img src="./assets/scheme_obstackle.png"><br>
+<table style="border: none;">
+    <tr>
+        <th style="border: none;">Tracking camera</th>
+        <th style="border: none;">Film camera</th>
+    </tr>
+    <tr>
+        <td style="border: none;"><img src="./renders/2/a_TrackingCameraView.png" width="300"></td>
+        <td style="border: none;"><img src="./renders/2/b_FilmCameraView.png" width="300"></td>
+    </tr>
+</table>
+</div>
+<br>
+Currently, we can't detect the FILM_CAMERA in dataset 2, due to the FLOOR_TARGET is out of sight of the FILM_CAMERA.  
+The task will be completed when we will get the FILM_CAMERA vectors in dataset 2.  
+To check that vectors were restored correctly, we can compare vectors with dataset 1, where FLOOR_TARGET is visible for the FILM_CAMERA:
+<br>
+<div align="center">
+<img src="./assets/scheme_obstackle.png"><br>
+<table style="border: none;">
+    <tr>
+        <th style="border: none;">Tracking camera</th>
+        <th style="border: none;">Film camera</th>
+    </tr>
+    <tr>
+        <td style="border: none;"><img src="./renders/1/a_TrackingCameraView.png" width="300"></td>
+        <td style="border: none;"><img src="./renders/1/b_FilmCameraView.png" width="300"></td>
+    </tr>
+</table>
+</div>
+<br>
