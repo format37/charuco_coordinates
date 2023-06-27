@@ -86,7 +86,7 @@ The task will be completed when we will get the FILM_CAMERA vectors in dataset 2
 To check that vectors were restored correctly, we can compare vectors with dataset 1, where FLOOR_TARGET is visible for the FILM_CAMERA:
 <br>
 <div align="center">
-<img src="./assets/scheme_no_obstackle.png"><br>
+<img src="./assets/scheme_no_obstacle.png"><br>
 <table style="border: none;">
     <tr>
         <th style="border: none;">Tracking camera</th>
