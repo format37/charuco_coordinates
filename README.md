@@ -25,7 +25,7 @@ Even as the FILM_CAMERAs begin to move and rotate, our objective remains to accu
 FLOOR_TARGET -> TRACKING_CAMERA -> FILM_TARGET -> FILM_VECTORS  -> FILM_CAMERA
 Consequently, we need a method that allows us to compute the FILM_CAMERA's position and rotation vectors in the FLOOR_TARGET coordinate system, even when the FLOOR_TARGET is out of sight of the FILM_CAMERA.  
 <div align="center">
-<img src="./assets/scheme_obstacle.png"><br>
+<img src="./assets/scheme_obstackle.png"><br>
 <table style="border: none;">
     <tr>
         <th style="border: none;">Tracking camera</th>
@@ -37,5 +37,6 @@ Consequently, we need a method that allows us to compute the FILM_CAMERA's posit
     </tr>
 </table>
 </div>
+
 ## What we have
 ...
