@@ -80,12 +80,13 @@ Estimate the camera translation and rotation vectors in the FLOOR_TARGET coordin
 </table>
 </div>
 <br>
-Currently, we can't detect the FILM_CAMERA in dataset 2, due to the FLOOR_TARGET is out of sight of the FILM_CAMERA.  
-The task will be completed when we will get the FILM_CAMERA vectors in dataset 2.  
+Currently, we can't detect the FILM_CAMERA in dataset 2, due to the FLOOR_TARGET is out of sight of the FILM_CAMERA.<br>
+<br>
+The task will be completed when we will get the FILM_CAMERA vectors in dataset 2.<br>
 To check that vectors were restored correctly, we can compare vectors with dataset 1, where FLOOR_TARGET is visible for the FILM_CAMERA:
 <br>
 <div align="center">
-<img src="./assets/scheme_obstackle.png"><br>
+<img src="./assets/scheme_no_obstackle.png"><br>
 <table style="border: none;">
     <tr>
         <th style="border: none;">Tracking camera</th>
