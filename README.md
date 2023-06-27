@@ -1,14 +1,15 @@
 # Charuco coordinates transformation
-* TRACKING_CAMERA have a wide-angle top-down view of the entire scene and is used to properly track the positions of the other.
-* FILM_CAMERAs with their respective Charuco targets.
-* FILM_CAMERA have a charuco board, mountet on the top of FILM_CAMERA.
+Setup:  
+* FLOOR_TARGET is a charuco board, mounted on the floor.  
+* TRACKING_CAMERA have a wide-angle top-down view of the entire scene and is used to properly track the position of the FILM_TARGTET.  
+* FILM_CAMERA have a FILM_TARGTET charuco board, mounted on the top of camera.  
   
-At the start, we know all cameras position in the FLOOR_TARGET coordinarte system.
+At the start, we know all cameras position in the FLOOR_TARGET coordinarte system.  
   
-But then the film cameras starting to move and rotate.
-FILM_CAMERA will not always will see tha FLOOR_TARGET, but we still need to know the FILM_CAMERA position and rotation in the FLOOR_TARGET coordinate system.
+But then the film cameras starting to move and rotate.  
+FILM_CAMERA will not always will see tha FLOOR_TARGET, but we still need to know the FILM_CAMERA position and rotation in the FLOOR_TARGET coordinate system.  
   
-We need to restore FILM_CAMERA position by the chain:
+We need to restore FILM_CAMERA position by the chain:  
 FLOOR_TARGET -> TRACKING_CAMERA -> FILM_TARGET -> FILM_VECTORS.
 
 ## Stage 1
