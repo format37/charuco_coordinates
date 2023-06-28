@@ -71,7 +71,8 @@ Finally, the 3d representation of camera vectors are plotted by matplotlib:
 <br>
 
 ## What we need
-Estimate the camera translation and rotation vectors in the FLOOR_TARGET coordinate system, even when the FLOOR_TARGET is out of sight of the FILM_CAMERA. This is dataset 2:
+Estimate the camera translation and rotation vectors in the FLOOR_TARGET coordinate system, even when the FLOOR_TARGET is out of sight of the FILM_CAMERA.<br>
+This is dataset 2:
 <br>
 <div align="center">
 <img src="./assets/scheme_obstackle.png"><br>
