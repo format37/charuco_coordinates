@@ -51,7 +51,7 @@ Each dataset have view of two cameras: TRACKING_CAMERA and FILM_CAMERA.
 * Six charuco dictionaries, because we have two charuco boards, with 0th and 5th ids.  
   
 * [charuco.py](https://github.com/format37/charuco_coordinates/blob/main/charuco.py) iterating all datasets, all dictionaries, all cameras. Trying to detect board and estimate the camera pose if board detected.  
-Rotation and translation vectors are saved to the out folder in text format:  
+Translation and rotation vectors are saved to the out folder in text format:  
 For example, out/0/b_FilmCameraView.png.txt:
 ```
 39.48273965613211,267.28585006705424,75.09798598707681
