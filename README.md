@@ -1,5 +1,5 @@
 # Charuco coordinates transformation
-Configurtation:  
+## Configurtation:  
 * The FLOOR_TARGET is a static charuco board positioned on the floor.  
 * The TRACKING_CAMERA is securely mounted, offering a wide-angle, top-down view of the entire scene, and its primary role is to accurately track the position of the FILM_TARGET.  
 * The FILM_CAMERA, on the other hand, is mobile and features a FILM_TARGET, which is a charuco board affixed to its top.  
