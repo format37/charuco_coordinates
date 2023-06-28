@@ -5,7 +5,10 @@
 * The FILM_CAMERA, on the other hand, is mobile and features a FILM_TARGET, which is a charuco board affixed to its top.  
 ## Stage 1
 At the start, we know all cameras position in the FLOOR_TARGET coordinarte system.  
-We need to calculate the FILM_VECTORS, which are translation and rotation vectors from FILM_CAMERA to FILM_TARGET that will be used further.<br>
+We need to **calculate the FILM_VECTORS**, which are translation and rotation vectors from FILM_CAMERA to FILM_TARGET that will be used further.  
+It can be done by establish a chain of reference:  
+FILM_CAMERA -> FLOOR_TARGET -> TRACKING_CAMERA -> FILM_TARGET -> FILM_VECTORS
+<br>
 <div align="center">
 <img src="./assets/scheme_no_obstacle.png"><br>
 <table style="border: none;">
@@ -21,7 +24,7 @@ We need to calculate the FILM_VECTORS, which are translation and rotation vector
 </div>
 
 ## Stage 2
-Even as the FILM_CAMERAs begin to move and rotate, our objective remains to accurately track the position and rotation of the FILM_CAMERA in the FLOOR_TARGET coordinate system, regardless of its visibility. To achieve this, we need to establish a chain of reference:  
+Even as the FILM_CAMERAs begin to move and rotate, our objective remains to accurately **track the position and rotation of the FILM_CAMERA in the FLOOR_TARGET coordinate system**, regardless of its visibility. To achieve this, we need to establish a chain of reference:  
 FLOOR_TARGET -> TRACKING_CAMERA -> FILM_TARGET -> FILM_VECTORS  -> FILM_CAMERA
 Consequently, we need a method that allows us to compute the FILM_CAMERA's position and rotation vectors in the FLOOR_TARGET coordinate system, even when the FLOOR_TARGET is out of sight of the FILM_CAMERA.  
 <div align="center">
@@ -114,3 +117,5 @@ pip install -r requirements.txt
 ```
 python charuco.py
 ```
+## Books
+* Multiple View Geometry in Computer Vision 2nd Edition by Richard Hartley and Andrew Zisserman
